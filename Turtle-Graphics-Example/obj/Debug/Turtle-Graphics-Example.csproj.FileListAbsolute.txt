@@ -1,0 +1,12 @@
+C:\Users\Ewa\Desktop\Example\TurtleGraphics.NET\Turtle-Graphics-Example\bin\Debug\Turtle-Graphics-Example.exe
+C:\Users\Ewa\Desktop\Example\TurtleGraphics.NET\Turtle-Graphics-Example\bin\Debug\Turtle-Graphics-Example.pdb
+C:\Users\Ewa\Desktop\Example\TurtleGraphics.NET\Turtle-Graphics-Example\bin\Debug\Nakov.TurtleGraphics.dll
+C:\Users\Ewa\Desktop\Example\TurtleGraphics.NET\Turtle-Graphics-Example\obj\Debug\Turtle-Graphics-Example.csproj.CoreCompileInputs.cache
+C:\Users\Ewa\Desktop\Example\TurtleGraphics.NET\Turtle-Graphics-Example\obj\Debug\Turtle-Graphics-Example.csproj.CopyComplete
+C:\Users\Ewa\Desktop\Example\TurtleGraphics.NET\Turtle-Graphics-Example\obj\Debug\Turtle-Graphics-Example.exe
+C:\Users\Ewa\Desktop\Example\TurtleGraphics.NET\Turtle-Graphics-Example\obj\Debug\Turtle-Graphics-Example.pdb
+C:\Users\Ewa\Desktop\Example\TurtleGraphics.NET\Turtle-Graphics-Example\obj\Debug\Turtle_Graphics_Example.TurtleGraphicsDemoForm.resources
+C:\Users\Ewa\Desktop\Example\TurtleGraphics.NET\Turtle-Graphics-Example\obj\Debug\Turtle-Graphics-Example.csproj.GenerateResource.cache
+C:\Users\Ewa\Desktop\Example\TurtleGraphics.NET\Turtle-Graphics-Example\obj\Debug\Turtle-Graphics-Example.csprojAssemblyReference.cache
+C:\Users\Ewa\Desktop\Example\TurtleGraphics.NET\Turtle-Graphics-Example\bin\Debug\System.ValueTuple.dll
+C:\Users\Ewa\Desktop\Example\TurtleGraphics.NET\Turtle-Graphics-Example\bin\Debug\System.ValueTuple.xml

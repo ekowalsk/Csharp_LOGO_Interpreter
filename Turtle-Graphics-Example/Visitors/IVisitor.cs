@@ -1,0 +1,32 @@
+public interface IVisitor
+{
+    void visit(AssignOp assignOp);
+    void visit(BackWard backWard);
+    void visit(BinOp binOp);
+    void visit(Clean clean);
+    void visit(Color color);
+    void visit(Compound compound);
+    void visit(Down down);
+    void visit(Forward forward);
+    void visit(Hide hide);
+    void visit(IfElse ifelse);
+    void visit(Left left);
+    void visit(Num num);
+    void visit(Param param);
+    void visit(Print print);
+    void visit(ProcCall procCall);
+    void visit(ProcDecl procDecl);
+    void visit(Program program);
+    void visit(Repeat repeat);
+    void visit(Right right);
+    void visit(SetPaintColor setPaintColor);
+    void visit(SetPenColor setPenColor);
+    void visit(SetPos setPos);
+    void visit(Show show);
+    void visit(Strings strings);
+    void visit(UnaryOp unaryOp);
+    void visit(Type type);
+    void visit(Up up);
+    void visit(Var var);
+    void visit(Whiles whiles);
+}

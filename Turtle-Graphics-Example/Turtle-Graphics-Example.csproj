@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0009E232-CD03-4C6D-B288-70EFA46083AB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Turtle_Graphics_Example</RootNamespace>
+    <AssemblyName>Turtle-Graphics-Example</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Nakov.TurtleGraphics, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nakov.TurtleGraphics.1.0.0.2\lib\net20\Nakov.TurtleGraphics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\portable-net40+sl4+win8+wp8\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dictionary.cs" />
+    <Compile Include="Nodes\Color.cs" />
+    <Compile Include="Nodes\Print.cs" />
+    <Compile Include="Nodes\ProcCall.cs" />
+    <Compile Include="Nodes\Strings.cs" />
+    <Compile Include="Stack.cs" />
+    <Compile Include="Visitors\Interpreter.cs" />
+    <Compile Include="Visitors\IVisitor.cs" />
+    <Compile Include="Nodes\AssignOp.cs" />
+    <Compile Include="Nodes\BackWard.cs" />
+    <Compile Include="Nodes\BinOp.cs" />
+    <Compile Include="Nodes\Clean.cs" />
+    <Compile Include="Nodes\Compound.cs" />
+    <Compile Include="Nodes\Down.cs" />
+    <Compile Include="Nodes\Forward.cs" />
+    <Compile Include="Nodes\Hide.cs" />
+    <Compile Include="Nodes\IAST.cs" />
+    <Compile Include="Nodes\IfElse.cs" />
+    <Compile Include="Nodes\Left.cs" />
+    <Compile Include="Nodes\Num.cs" />
+    <Compile Include="Nodes\Param.cs" />
+    <Compile Include="Nodes\ProcDecl.cs" />
+    <Compile Include="Nodes\Program.cs" />
+    <Compile Include="Nodes\Repeat.cs" />
+    <Compile Include="Nodes\Right.cs" />
+    <Compile Include="Nodes\SetPaintColor.cs" />
+    <Compile Include="Nodes\SetPenColor.cs" />
+    <Compile Include="Nodes\SetPos.cs" />
+    <Compile Include="Nodes\Show.cs" />
+    <Compile Include="Nodes\Type.cs" />
+    <Compile Include="Nodes\UnaryOp.cs" />
+    <Compile Include="Nodes\Up.cs" />
+    <Compile Include="Nodes\Var.cs" />
+    <Compile Include="Nodes\Whiles.cs" />
+    <Compile Include="Parser.cs" />
+    <Compile Include="Position.cs" />
+    <Compile Include="Scanner\Lexer.cs" />
+    <Compile Include="Source\FileSource.cs" />
+    <Compile Include="Source\ISource.cs" />
+    <Compile Include="Source\StringSource.cs" />
+    <Compile Include="SymbolTable\BuiltInTypeSymbol.cs" />
+    <Compile Include="SymbolTable\ISymbol.cs" />
+    <Compile Include="SymbolTable\ProcedureSymbol.cs" />
+    <Compile Include="SymbolTable\ScopeSymbolTable.cs" />
+    <Compile Include="Visitors\SemanticAnalyzer.cs" />
+    <Compile Include="SymbolTable\VarSymbol.cs" />
+    <Compile Include="Token.cs" />
+    <Compile Include="TurtleGraphicsDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TurtleGraphicsDemoForm.Designer.cs">
+      <DependentUpon>TurtleGraphicsDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TurtleGraphicsDemoForm.resx">
+      <DependentUpon>TurtleGraphicsDemoForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
